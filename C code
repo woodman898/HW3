@@ -24,6 +24,76 @@ int main(){
 }
 
 //Q3
+int main()
+{
+ int esp1ch = 0x64;
+ int esp18h;
+ int esp14h;
+ int esp10h;
+ int esp4;
+ int eax,ebx,ecx,edx;
+ while(esp1ch<=0x3E7){
+  ecx = esp1ch;
+  edx = INT32_MAX;
+  eax = ecx;
+  eax *= edx;
+  edx /= 2^5;
+  eax = ecx;
+  eax /=abs(eax);
+  edx -=eax;
+  eax = edx;
+  esp18h = eax;
+  eax = esp18h;
+  edx = eax * 0x80000064;
+  eax = esp1ch;
+  ecx = edx+eax;
+  
+  edx = 0x66666667;
+  eax = ecx;
+  eax *=edx;
+  edx /=2^2;
+  eax = ecx;
+  eax /=abs(eax);
+  edx -=eax;
+  eax = edx;
+  
+  esp14h = eax;
+  ecx = esp1ch;
+  
+  edx = 0x66666667;
+  eax = ecx;
+  eax *=edx;
+  edx /=2^2;
+  eax = ecx;
+  eax /=abs(eax);
+  edx -=eax;
+  eax = edx;
+  
+  eax *= 2^2;
+  eax += edx;
+  eax += eax;
+  ecx -= eax;
+  eax = ecx;
+  esp10h=eax;
+  
+  eax = esp18h;
+  eax *= esp18h^2;
+  edx = eax;
+  
+  eax = esp14h;
+  eax *= esp14h^2;
+  edx = eax;
+  
+  eax = esp10h;
+  eax *= esp10h^2;
+  eax += edx;
+  if(eax == esp1ch){
+   printf("%d",esp1ch);
+  }
+  else esp1ch++;
+ }
+ return 0;
+}
 
 //Q4
 int _cdecl main(int argc, const char **argv, const char **envp){

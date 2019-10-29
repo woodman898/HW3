@@ -14,12 +14,12 @@ int main(int argc, const char **argv, const char **envp){
 //Q2
 #include <stdio.h>
 int main(){
-    short int *list=[0x0C,0x0F, 0x0DD, 0x3, 0x1B0, 0x36, 0x10, 0x43];
+    short int *list=[0x0C,0x0F, 0x0DD, 0x3, 0x1B0, 0x36, 0x10, 0x43];  //create a list with values
     short int max = 0;
     for(int a = 0; a = 7; a++){
         if(list[a]>max)
             max = list[a];
-    }
+    }                                                                  //find out the largest value from these elements
     printf("%d", max);
 }
 
@@ -52,7 +52,7 @@ int main(){
     int o = 100;
     int p = 7;
     for(int i = 0; i < o; ++i)
-        n[i] = i + 1;
+        n[i] = i + 1;                                                       //create a matrix from 1 to 100 with null
     m = proc1(n, o, p);
     printf("%d\n", m);
     return 0;
@@ -74,7 +74,7 @@ int proc1 (int *a1, int a2, int a3){
         while (!a1[y])
             y = (y+1)%a2;
         z = a1[y];
-        a1[y] = 0;
-   }
+        a1[y] = 0;                                                          //set the value to 0 every 6 null
+   }                                                                        //skip the value 0 and find out where the final step locate at
    return z;
 }

@@ -6,7 +6,7 @@ int main(int argc, const char **argv, const char **envp){
     ptr[7]=3;
     ptr[6]=5;
     ptr[5]=0;
-    ptr[5]=ptr[7]*ptr[6]-(ptr[7]+(ptr[7]+ptr[7]/abs(ptr[7]))/2);
+    ptr[5]=ptr[7]*ptr[6]-(ptr[7]+(ptr[7]+ptr[7]/abs(ptr[7]))/2);        //do the caluation for x*y-(x+(x+x/|x|)/2)
     ptr[1]=ptr[5];
     printf("%d", ptr[1]);
 }

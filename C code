@@ -38,9 +38,9 @@ int main()
    esp14h =0x66666667/4-ecx/abs(ecx);
    esp10h=esp1ch-10*(0x66666667/4-esp1ch/abs(esp1ch));
    if(esp10h^3+esp14h^3+esp18h^3 == esp1ch){
-   printf("%d",esp1ch);
-  }
-  else esp1ch++;
+      printf("%d",esp1ch);
+      esp1ch++;
+   }                                                                    //find every combo that satisify esp10h^3+esp14h^3+esp18h^3 == esp1ch
  }
  return 0;
 }
